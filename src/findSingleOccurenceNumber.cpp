@@ -14,7 +14,15 @@ NOTES:
 There are better ways of solving the problem than a brute-force solution which is of O(n^2)
 complexity .
 */
-
+struct Numbers{
+	int num;
+	int count;
+}s1;
 int findSingleOccurenceNumber(int *A, int len) {
+	if (A == 0)
+		return -1;
+	int i;
+	for (i = 0; i < len;i++)
+
 	return -1;
 }
