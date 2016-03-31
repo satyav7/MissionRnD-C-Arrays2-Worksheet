@@ -21,8 +21,23 @@ struct Numbers{
 int findSingleOccurenceNumber(int *A, int len) {
 	if (A == 0)
 		return -1;
-	int i;
-	for (i = 0; i < len;i++)
+	int i,j,count;
+	for (i = 0; i < len; ){
+		count = 0;
+		for (j = 0; j < len; j++){
+			if (A[i] == A[j]){
+				count++;
+				if (count == 2){
+					i++;
+					j = -1;
+				}
+			}
+		}
+		if (count == 1)
+			return A[i];
+		
+	}
+	
 
 	return -1;
 }
